@@ -1,0 +1,1 @@
+- cara koneksi dari python ke sql server

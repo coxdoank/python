@@ -1,0 +1,3 @@
+- cara koneksi dari python ke mysql
+- insert data ke database dari file csv
+- running job python dengan multiple file
