@@ -10,12 +10,12 @@ from connection_db_mysql import create_db_connection
 #   database="tutorial"
 # )
 
-mydb = create_db_connection("192.168.0.103", "root", "", "tutorial")
+mydb = create_db_connection("localhost", "root", "", "tutorial")
 
 mycursor = mydb.cursor()
 
 # membuka file csv
-with open('../sampledata/data_pemain_bola.csv', 'r') as file:
+with open('./sampledata/data_pemain_bola.csv', 'r') as file:
     reader = csv.reader(file)
     next(reader) # skip header row
     for row in reader:
@@ -36,4 +36,4 @@ with open('../sampledata/data_pemain_bola.csv', 'r') as file:
 # commit perubahan ke database
 mydb.commit()
 
-# print(mycursor.rowcount, "baris berhasil diinsert/update.")
+print(mycursor.rowcount, "baris berhasil diinsert/update.")

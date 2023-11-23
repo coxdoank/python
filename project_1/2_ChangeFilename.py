@@ -3,7 +3,7 @@ import shutil
 import datetime
 
 # Mendefinisikan direktori file dan nama file yang akan diubah
-file_path = "../sampledata/data_pemain_bola.csv"
+file_path = "./sampledata/data_pemain_bola.csv"
 
 # Menggunakan fungsi os.path.basename untuk mengambil nama file dari path
 file_name = os.path.basename(file_path)
@@ -22,5 +22,5 @@ new_name = name + "_" + now.strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
 os.rename(file_path, new_name)
 
 # Memindahkan file baru ke direktori tujuan dengan menggunakan shutil.move
-destination_path = "../sampledata/"
+destination_path = "./sampledata/"
 shutil.move(new_name, destination_path)
